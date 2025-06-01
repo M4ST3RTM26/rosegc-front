@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin - Gerenciar Moldes</title>
+  <style>
+    body {
+      background-color: #000;
+      color: #fff;
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    h1 {
+      text-align: center;
+      color: #ff4fc6;
+      margin-top: 40px;
+    }
+    .form-container {
+      max-width: 500px;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: #1a1a1a;
+      border: 1px solid #ff4fc6;
+      border-radius: 10px;
+    }
+    .form-container label {
+      display: block;
+      margin-top: 10px;
+      color: #ccc;
+    }
+    .form-container input,
+    .form-container textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: none;
+      border-radius: 5px;
+      background-color: #2a2a2a;
+      color: #fff;
+    }
+    .form-container button {
+      margin-top: 15px;
+      padding: 10px 15px;
+      background-color: #ff4fc6;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .form-container button:hover {
+      background-color: #e043b0;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Admin - Gerenciar Moldes</h1>
+  <div class="form-container">
+    <form id="form-molde">
+      <label for="nome">Nome do Molde:</label>
+      <input type="text" id="nome" name="nome" required>
+
+      <label for="descricao">Descrição:</label>
+      <textarea id="descricao" name="descricao" rows="4" required></textarea>
+
+      <label for="link">Link para Download:</label>
+      <input type="url" id="link" name="link" required>
+
+      <button type="submit">Adicionar Molde</button>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById('form-molde').addEventListener('submit', function(e) {
+      e.preventDefault();
+      // Aqui você pode adicionar a lógica para salvar os dados no backend
+      alert('Molde adicionado com sucesso!');
+      // Limpar o formulário após o envio
+      e.target.reset();
+    });
+  </script>
+
+</body>
+</html>
